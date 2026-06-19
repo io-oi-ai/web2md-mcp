@@ -1,21 +1,22 @@
 {
   "name": "web2md-mcp",
   "version": "0.8.1",
-  "description": "MCP Server for Web2MD — convert URLs to Markdown from Claude Desktop, Cursor, etc.",
+  "description": "MCP server to convert any webpage to clean Markdown for Claude Desktop, Cursor & AI agents — works on Reddit, X, and paywalled pages via Agent Bridge.",
   "main": "dist/index.js",
   "bin": {
     "web2md-mcp": "dist/index.js",
     "web2md-agent-host": "dist/native-host.js"
   },
-  "keywords": ["mcp", "markdown", "web2md", "claude", "cursor", "ai", "web-scraping", "chrome-extension"],
+  "keywords": ["mcp", "mcp-server", "markdown", "web2md", "webpage-to-markdown", "url-to-markdown", "html-to-markdown", "claude", "claude-desktop", "cursor", "ai", "llm", "rag", "web-scraping", "chrome-extension", "model-context-protocol"],
   "author": "Web2MD <support@web2md.org>",
   "license": "MIT",
   "homepage": "https://web2md.org/docs/advanced/agent-bridge",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicewuxi/web2md-mcp"
+    "url": "git+https://github.com/io-oi-ai/web2md-mcp.git"
   },
-  "files": ["dist", "README.md", "Dockerfile"],
+  "files": ["dist", "README.md", "LICENSE", "Dockerfile"],
+  "bugs": { "url": "https://github.com/io-oi-ai/web2md-mcp/issues" },
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
