@@ -7,7 +7,24 @@
     "web2md-mcp": "dist/index.js",
     "web2md-agent-host": "dist/native-host.js"
   },
-  "keywords": ["mcp", "mcp-server", "markdown", "web2md", "webpage-to-markdown", "url-to-markdown", "html-to-markdown", "claude", "claude-desktop", "cursor", "ai", "llm", "rag", "web-scraping", "chrome-extension", "model-context-protocol"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "markdown",
+    "web2md",
+    "webpage-to-markdown",
+    "url-to-markdown",
+    "html-to-markdown",
+    "claude",
+    "claude-desktop",
+    "cursor",
+    "ai",
+    "llm",
+    "rag",
+    "web-scraping",
+    "chrome-extension",
+    "model-context-protocol"
+  ],
   "author": "Web2MD <support@web2md.org>",
   "license": "MIT",
   "homepage": "https://web2md.org/docs/advanced/agent-bridge",
@@ -15,8 +32,15 @@
     "type": "git",
     "url": "git+https://github.com/io-oi-ai/web2md-mcp.git"
   },
-  "files": ["dist", "README.md", "LICENSE", "Dockerfile"],
-  "bugs": { "url": "https://github.com/io-oi-ai/web2md-mcp/issues" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "Dockerfile"
+  ],
+  "bugs": {
+    "url": "https://github.com/io-oi-ai/web2md-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
@@ -27,6 +51,7 @@
     "zod": "^3.22.0"
   },
   "devDependencies": {
+    "@types/node": "^22.20.3",
     "tsx": "^4.7.0",
     "typescript": "^5.3.0"
   }

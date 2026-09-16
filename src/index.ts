@@ -19,7 +19,10 @@ const authHeaders = {
 
 const server = new McpServer({
   name: 'web2md',
-  version: '0.8.0',
+  // ⚠ 与 package.json 的 version 手动保持一致 —— 发版时两处都要改。
+  // (不从 package.json 读:这个包没声明 type,JSON import 在 ESM/CJS 下
+  //  行为不一致,为一个版本号引入构建风险不划算。)
+  version: '0.8.1',
 })
 
 server.tool(
