@@ -17,7 +17,10 @@ const authHeaders = {
 };
 const server = new mcp_js_1.McpServer({
     name: 'web2md',
-    version: '0.8.0',
+    // ⚠ 与 package.json 的 version 手动保持一致 —— 发版时两处都要改。
+    // (不从 package.json 读:这个包没声明 type,JSON import 在 ESM/CJS 下
+    //  行为不一致,为一个版本号引入构建风险不划算。)
+    version: '0.8.1',
 });
 server.tool('convert_url', 'Convert a webpage URL to clean Markdown. Returns the Markdown content and metadata (title, word count, reading time).', {
     url: zod_1.z.string().url().describe('The URL of the webpage to convert'),
