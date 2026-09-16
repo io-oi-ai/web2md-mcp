@@ -14,16 +14,31 @@
 
 ## Why use this?
 
-| | web2md-mcp | Server-side reader APIs |
-|---|---|---|
-| Clean Markdown built for LLM context | ✅ | ✅ |
-| Token counting + metadata | ✅ | ⚠️ varies |
-| Works on Reddit / X / paywalled pages | ✅ (Agent Bridge) | ❌ blocked by anti-bot |
-| Uses *your* authenticated session | ✅ (Agent Bridge) | ❌ |
-| Batch convert up to 50 URLs | ✅ | ⚠️ varies |
-| One-line MCP install | ✅ | varies |
+The honest version: most webpage-to-Markdown tools convert HTML well. The thing
+they differ on is **whether they can reach the page at all**.
 
-If you've hit "I can't access that URL" in Claude or Cursor when pasting a Reddit/X/Substack link, this is the fix.
+| | web2md-mcp | Jina Reader / Firecrawl | MarkDownload / SingleFile | Turndown |
+|---|---|---|---|---|
+| Clean Markdown built for LLM context | ✅ | ✅ | ✅ | ✅ (library only) |
+| Callable by an AI agent (MCP) | ✅ | via HTTP API | ❌ manual click | ❌ |
+| Works on Reddit / X / paywalled pages | ✅ (Agent Bridge) | ❌ blocked by anti-bot | ✅ (you click it) | n/a |
+| Uses *your* authenticated session | ✅ (Agent Bridge) | ❌ datacenter fetch | ✅ | n/a |
+| Batch convert many URLs unattended | ✅ up to 50 | ✅ | ❌ one at a time | ❌ |
+| Token counting + metadata | ✅ | ⚠️ varies | ❌ | ❌ |
+
+**Where each one is the right answer:**
+
+- **Jina Reader / Firecrawl** — public pages at scale, no browser needed. If your
+  URLs are public docs or blogs, these are simpler than running an extension.
+- **MarkDownload / SingleFile / Obsidian Web Clipper** — you're reading a page and
+  want to save it yourself. Great at that; they need a human to click.
+- **Turndown** — an HTML→Markdown library, not a fetcher. Use it inside your own code.
+- **web2md-mcp** — an *agent* needs the page, and the page is behind a login, a
+  bot wall, or heavy JS. That's the gap this fills: conversion happens in your
+  real browser session, so the page sees you, not a datacenter IP.
+
+If you've hit "I can't access that URL" in Claude or Cursor when pasting a
+Reddit/X/Substack link, this is the fix.
 
 ---
 
